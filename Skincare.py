@@ -73,7 +73,7 @@ class Skincare:
     #This offers a random free skincare product, thus increasing the stats relating to the random skincare product.
     def voucher(self):
         #Receiving a free skincare product has a 10% chance of happening, aka if the number 10 is chosen.
-        causeorno = random.randint(1,3)
+        causeorno = random.randint(1,10)
         if causeorno == 10:
             chooseitem = random.randint(1,9)
             #1 provides the effects of salicylic acid.
@@ -107,7 +107,7 @@ class Skincare:
     #This causes a breakout, and a loss in a random stat.
     def breakout(self):
         #A breakout has a 25% chance of occurring, aka if the number 4 is chosen.
-        causeorno = random.randint(1, 3)
+        causeorno = random.randint(1, 4)
         if causeorno == 4:
             typeofloss = random.randint(1, 5)
             #1 corresponds to a decrease in the acne stat.
