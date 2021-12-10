@@ -10,7 +10,6 @@ class Skincare:
     
     #Create a constructor featuring five traits: how much acne one has, how well one's skin glows, how hydrated one's skin is, how wrinkly one's skin is, and how soft one's skin is.
     def __init__(self):
-        
         self.__money = 300
         self.__acne = random.randint(1, 10)
         self.__glow = random.randint(1, 10)
@@ -72,6 +71,7 @@ class Skincare:
 
     #This offers a random free skincare product, thus increasing the stats relating to the random skincare product.
     def voucher(self):
+        
         #Receiving a free skincare product has a 10% chance of happening, aka if the number 10 is chosen.
         causeorno = random.randint(1,10)
         if causeorno == 10:
@@ -79,30 +79,59 @@ class Skincare:
             #1 provides the effects of salicylic acid.
             if chooseitem == 1:
                 print("You have received a free bottle of salicylic acid, helping your acne, glow, and texture!")
+                self.set_acne()
+                self.set_glow()
+                self.set_texture()
             #2 provides the effects of hyaluronic acid.
             if chooseitem == 2:
                 print("You have received a free bottle of hyaluronic acid, helping your hydration and wrinkles!")
+                self.set_hydration()
+                self.set_wrinkles()
             #3 provides the effects of glycolic acid.
             if chooseitem == 3:
                 print("You have received a free bottle of glycolic acid, helping your acne, glow, wrinkles, and texture!")
+                self.set_acne()
+                self.set_glow()
+                self.set_wrinkles()
+                self.set_texture()
+                
             #4 provides the effects of lactic acid.
             if chooseitem == 4:
                 print("You have received a free bottle of lactic acid, helping your acne, glow, hydration, wrinkles, and texture!")
+                self.set_acne()
+                self.set_glow()
+                self.set_hydration()
+                self.set_wrinkles()
+                self.set_texture()
             #5 provides the effects of mandelic acid.
             if chooseitem == 5:
                 print("You have received a free bottle of mandelic acid, helping your acne, glow, wrinkles, and texture!")
+                self.set_acne()
+                self.set_glow()
+                self.set_wrinkles()
+                self.set_texture()
             #6 provides the effects of azelaic acid.
             if chooseitem == 6:
                 print("You have received a free bottle of azelaic acid, helping your acne, glow, and texture!")
+                self.set_acne()
+                self.set_glow()
+                self.set_texture()
             #7 provides the effects of ferulic acid.
             if chooseitem == 7:
                 print("You have received a free bottle of ferulic acid, helping your glow and wrinkles!")
+                self.set_glow()
+                self.set_wrinkles()
             #8 provides the effects of kojic acid.
             if chooseitem == 8:
                 print("You have received a free bottle of kojic acid, helping your acne and glow!")
+                self.set_acne()
+                self.set_glow()
             #9 provides the effects of L-ascorbic acid.
             if chooseitem == 9:
                 print("You have received a free bottle of L-ascorbic acid, helping your glow, hydration, and wrinkles!")
+                self.set_glow()
+                self.set_hydration()
+                self.set_wrinkles()
     
     #This causes a breakout, and a loss in a random stat.
     def breakout(self):
